@@ -27,7 +27,7 @@ const NobelPrizeInfo = () => {
     <div>
       <h1>Nobel Prizes for {year}</h1>
       {loading ? (
-        <div className="spinner"></div> // Show spinner while loading
+        <div className="spinner"></div> 
       ) : prizes.length ? (
         prizes.map((prize, index) => (
           <div key={index} className="card">
