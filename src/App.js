@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+
 import './App.css';
+import React from 'react';
+import Home from './Home';
+import NobelPrizeInfo from './NobelPrizeInfo';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <h1>Abdimalik Abukar - n01630627</h1>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Home />}/>
+      <Route path='/nobel/:year' element={<NobelPrizeInfo />}/>
+      
+    </Routes>
+    </BrowserRouter>
     </div>
   );
 }
